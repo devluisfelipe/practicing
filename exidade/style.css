@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(49, 159, 237);
+}
+
+header {
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 35px; 
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    min-width: 300px;
+    width: 50vw;
+    margin: auto;
+    padding: 12px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.592);
+}
+
+div > p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#imagem {
+    text-align: center;
+}
+
+#resposta {
+    text-align: center;
+    color: rgb(119, 119, 119);
+}
+
+#yearborn {
+    width: 100px;
+}
+
+footer {
+    color: white;
+    width: 50vw;
+    margin: auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+footer > p {
+    text-align: center;
+    line-height: 1.35em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+}
+
+a::after {
+    content: '\1F517';
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p><strong>Ano de nascimento</strong>: <input type="number" name="txtano" id="yearborn"></p>
+            <p><strong>Genêro</strong>:
+                <input type="radio" name="opçao" id="masc" checked> <!-- utilizou-se o checked apenas para chamar a atenção do usuário e ele lembrar de colcoar a opção adequada -->
+
+                <label for="male">Masculino</label>
+                <input type="radio" name="opçao" id="fem">
+                <label for="female">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="resposta">
+            <p> &#x26A0 Insirir <strong>apenas</strong> o ano.</p>
+        </div>
+
+        <div id="imagem">
+            <img src="" alt="" id="foto">
+        </div>
+    </section>
+
+    <footer>
+        <p> Essa aplicação foi desenvolvida a partir <strong>da ideia do professor Gustavo Guanabara</strong> do <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" hreflang="pt-br" target="_blank" rel="external">CursoemVideo</a></p>
+    </footer>
+
+    <script src="JSidade.js"></script>
+</body>
+</html>
