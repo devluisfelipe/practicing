@@ -19,7 +19,23 @@ function clicar () {
         ans.innerHTML = '' /* para não aparecer o que estava escrito na tag em html antes de executar a ação E também para poder acrescentar todos os resultados através da concatenação  */
 
         for (var op = inic; op < fim; op+=espaç) {
-            ans.innerHTML += `${op} \u{27A1}`   // diferentemente do html, e JS aplica-se \u{INSERIR O CÓDIGO SEM O +U}
+
+            let addDiv = window.document.createElement('div')
+
+            addDiv.innerText += `${op}`
+            addDiv.style.background = 'rgba(0, 0, 0, 0.47)'
+            addDiv.style.color = 'white'
+            addDiv.style.borderRadius = '8px'
+            addDiv.style.width = '32px'
+            addDiv.style.height = '26px'
+            addDiv.style.textAlign = 'center'
+            addDiv.style.paddingTop = '6px'
+            addDiv.style.margin = '4px'
+            addDiv.style.display = 'inline-block'
+            addDiv.style.transition = '15s'
+            ans.appendChild(addDiv)
+            
+
         }
         
         for (var op = inic; op > fim; op-=espaç) {
