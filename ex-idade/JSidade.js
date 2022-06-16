@@ -57,7 +57,6 @@ function verificar () {
         bgans.style.backgroundColor = `rgba(0, 0, 0, 0.4)`
         bgans.style.borderRadius = `8px`
         bgans.style.padding = `8px`
-        
     }
 }
 
