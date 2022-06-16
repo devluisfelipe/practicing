@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(28, 28, 28);
+}
+
+header > h1 {
+    text-align: center;
+    color: cyan;
+    margin-inline: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 401px;
+}
+
+main {
+    text-align: center;
+}
+
+main > div > #tabnumber {
+    height: 30px;
+    border-radius: 8px;
+    width: 170px;
+    border: none;
+    padding: 4px;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+main > div > #botão {
+    height: 40px;
+    width: 71px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: rgb(149, 77, 173);
+    margin-left: 8px;
+    font-weight: bolder;
+    font-size: 1.05em;
+}
+
+#botão:hover {
+    filter: brightness(105%);
+}
+
+main > div#resposta {
+    margin-top: 15px;    
+    width: 262px;
+    margin-inline: auto;
+    color: white;
+}
+
+footer > p {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: white;
+    width: 401px;
+    margin-inline: auto;
+}
+
+footer > p > a {
+    text-decoration: none;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: cyan;
+    transition-duration: 0.5s;
+    padding: 1px;
+}
+
+a:visited {
+    color: white;
+}
