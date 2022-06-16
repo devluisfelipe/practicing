@@ -13,22 +13,15 @@
         <h1>Aplicação de 'repetição'</h1>
     </header>
 
-    <section>
-        <div>
-            <p>Início: <input type="number" name="cxnumber" id="start"></p>
-            
-            <p>Fim: <input type="number" name="cxnumber" id="end"></p>
-
-            <p>Intervalo: <input type="number" name="number" id="intervalo"></p>
-
-            <p><input type="button" value="Aplicar" onclick="clicar()"></p>
-        </div>
-
-
-    </section>
-
-        <div id="resposta">
-        </div>
+        <main>
+            <p><input type="number" name="cxnumber" id="start" placeholder="Digite um número inicial"></p>
+                
+            <p><input type="number" name="cxnumber" id="end" placeholder="Digite um número final"></p>
+            <p><input type="number" name="number" id="intervalo" placeholder="Digite um valor para o intervalo"></p>
+            <p><input type="button" value="Aplicar" onclick="clicar()" id="botão"></p>
+                                
+             <div id="resposta"></div>
+        </main>
 
     <footer>
         <p> Essa aplicação foi desenvolvida a partir <strong>da ideia do professor Gustavo Guanabara</strong> do <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" hreflang="pt-br" target="_blank" rel="external">CursoemVideo</a></p>

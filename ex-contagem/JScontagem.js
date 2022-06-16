@@ -32,7 +32,6 @@ function clicar () {
             addDiv.style.paddingTop = '6px'
             addDiv.style.margin = '4px'
             addDiv.style.display = 'inline-block'
-            addDiv.style.transition = '15s'
             ans.appendChild(addDiv)
             
 
