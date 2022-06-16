@@ -7,7 +7,7 @@ function clicar () {
 
     var ans = window.document.getElementById('resposta')
 
-    if (inic == fim || inic == 0 || fim == 0 || espaç == 0) {
+    if (inic == fim || inic == 0 || fim <= 0 || espaç == 0) {
         window.alert('[ERRO] Reavalie os valores inseridos.')
     } else {
         
@@ -33,12 +33,25 @@ function clicar () {
             addDiv.style.margin = '4px'
             addDiv.style.display = 'inline-block'
             ans.appendChild(addDiv)
-            
-
         }
         
         for (var op = inic; op > fim; op-=espaç) {
-            ans.innerHTML += `${op} \u{27A1}`
+            
+            let addDiv = window.document.createElement('div')
+
+            ans.innerHTML += `${op}`
+            addDiv.style.background = 'rgba(0, 0, 0, 0.47)'
+            addDiv.style.color = 'white'
+            addDiv.style.borderRadius = '8px'
+            addDiv.style.width = '32px'
+            addDiv.style.height = '26px'
+            addDiv.style.textAlign = 'center'
+            addDiv.style.paddingTop = '6px'
+            addDiv.style.margin = '4px'
+            addDiv.style.display = 'inline-block'
+            ans.appendChild(addDiv)
+
+            
         }
         
         ans.innerHTML += `\u{1F3C1}`
