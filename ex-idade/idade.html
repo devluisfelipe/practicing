@@ -13,29 +13,42 @@
         <h1>Verificador de Idade</h1>
     </header>
 
-    <section>
-        <div>
-            <p><strong>Ano de nascimento</strong>: <input type="number" name="txtano" id="yearborn"></p>
-            <p><strong>Genêro</strong>:
-                <input type="radio" name="opçao" id="masc" checked> <!-- utilizou-se o checked apenas para chamar a atenção do usuário e ele lembrar de colcoar a opção adequada -->
+    <main>
 
+         <div id="nascAno">
+            <input type="number" name="txtano" placeholder="Ano de nascimento" id="yearborn">
+        </div>
+
+
+
+        <section>
+            <div id="generomasc">
+                <input type="radio" name="opçao" id="masc" checked> <!-- utilizou-se o checked apenas para chamar a atenção do usuário e ele lembrar de colcoar a opção adequada -->
                 <label for="male">Masculino</label>
+            </div>
+
+            <div id="generofem">
                 <input type="radio" name="opçao" id="fem">
                 <label for="female">Feminino</label>
-            </p>
-            <p>
-                <input type="button" value="Verificar" onclick="verificar()">
-            </p>
+            </div>
+        </section>
+
+
+
+        <div id="bot">
+            <input type="button" value="Verificar" onclick="verificar()">
         </div>
 
-        <div id="resposta">
-            <p> &#x26A0 Insirir <strong>apenas</strong> o ano.</p>
-        </div>
 
-        <div id="imagem">
-            <img src="" alt="" id="foto">
-        </div>
-    </section>
+        <section id="bg">
+            <div id="resposta">
+            </div>
+
+            <div id="imagem">
+                <img src="" alt="" id="foto">
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p> Essa aplicação foi desenvolvida a partir <strong>da ideia do professor Gustavo Guanabara</strong> do <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" hreflang="pt-br" target="_blank" rel="external">CursoemVideo</a></p>
