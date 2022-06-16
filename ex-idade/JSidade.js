@@ -22,35 +22,33 @@ function verificar () {
         if (genero[0].checked) {
             sexo = 'um homem'
 
-            
 
             if (idade > 0 && idade <= 12) {
                 pic.src = 'imagens/youngb.png'
-                //document.body.style.backgroundColor = `#93B378`
+
              } else if (idade > 12 && idade <= 25) { 
                 pic.src = 'imagens/boy.png'
-                //document.body.style.backgroundColor = `rgb(49, 159, 237)`
+
              } else if (idade > 25 && idade <= 50) {
                 pic.src = 'imagens/man.png'
-                //document.body.style.backgroundColor = `#B27657`
+
              } else {
                 pic.src = 'imagens/elderlyM.png'
-                //document.body.style.backgroundColor = `#B9D0DC`
              }
+
         } else {
             sexo = 'uma mulher'
             if (idade > 0 && idade <= 12) {
                 pic.src = 'imagens/youngG.png'
-                document.body.style.backgroundColor = `#7C3547`
+
              } else if (idade > 12 && idade <= 25) { 
                 pic.src = 'imagens/girl.png'
-                document.body.style.backgroundColor = `#273F50`
+
              } else if (idade > 25 && idade <= 50) {
                 pic.src = 'imagens/woman.png'
-                document.body.style.backgroundColor = `#097B71`
+
              } else {
                 pic.src = 'imagens/elderlyW.png'
-                document.body.style.backgroundColor = `#8A5A44`
              }
         }
 

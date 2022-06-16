@@ -21,34 +21,16 @@ header {
     text-align: center;
 }
 
-/* section {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.271);
-    border-radius: 8px;
-    min-width: 300px;
-    width: 50vw;
-    margin: auto;
-    padding: 12px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.592);
-} */
-
 input#yearborn {
     display: block;
-    width: 71vw;
-    max-width: 300px;
+    width: 300px;
     height: 30px;
     padding: 4px;
-    text-align: center;
     margin: auto;
-    font-size: 1.2em;
     border-radius: 8px;
     border: none;
-    margin-bottom: 10px;
-}
-
-main > section {
-    width: 305px;
-    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
@@ -56,6 +38,9 @@ main > section {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    width: 305px;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 main > section#bg {
@@ -93,12 +78,8 @@ div > p {
     padding-bottom: 5px;
 }
 
-#imagem, #reposta {
+#foto, #reposta {
     text-align: center;
-}
-
-#yearborn {
-    width: 100px;
 }
 
 footer {
