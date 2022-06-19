@@ -16,7 +16,7 @@
     <main>
         <div>
             <input type="number" name="cxEntrada" id="valorEntrada" placeholder="Digite um valor aqui">
-            <input type="button" value="Adicionar" id="add">
+            <input type="button" value="Adicionar" id="add" onclick="adicionar()">
         </div>
 
         <div>
@@ -24,12 +24,19 @@
         </div>
 
         <div>
-            <input type="button" value="Finalizar" id="finish">
+            <input type="button" value="Finalizar" id="finish" onclick="finalizar()">
+        </div>
+
+        <div id="resposta">
+
         </div>
     </main>
 
     <footer>
         <p> Essa aplicação foi desenvolvida a partir <strong>da ideia do professor Gustavo Guanabara</strong> do <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" hreflang="pt-br" target="_blank" rel="external">CursoemVideo</a></p>
     </footer>
+
+    <script src="progArray.js"></script>
+
 </body>
 </html>

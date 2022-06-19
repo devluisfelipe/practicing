@@ -53,6 +53,7 @@ input#add:hover {
     width: 251px;
     border-radius: 8px;
     margin-bottom: 17px;
+    padding: 5px;
 }
 
 input#finish {
@@ -70,6 +71,16 @@ input#finish {
 input#finish:hover {
     background-color: rgba(0, 0, 0, 0.71);
     color: rgb(234, 98, 19);
+}
+
+div#resposta {
+    width: 350px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top: 17px;
 }
 
 footer {
