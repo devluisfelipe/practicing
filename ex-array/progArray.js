@@ -62,8 +62,6 @@ function finalizar() {
             }
         }
 
-        
-
     ans.innerHTML = ``
     ans.innerHTML += `Foram adicionados ${conjunto.length} números.`
     ans.innerHTML += `<p>O valor do menor dado inserido foi ${valorBaixo}</p>`
