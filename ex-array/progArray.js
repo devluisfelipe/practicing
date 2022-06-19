@@ -35,7 +35,7 @@ function adicionar () {
         item.innerHTML = `Foi adicionado o número: ${numeroIn.value}`
 
     } else {
-        window.alert ('[ERRO] Valor inválido ou já adicionado na lista. Por favor, insira outra número.')
+        window.alert ('[ERRO] Valor inválido ou já adicionado na lista. Por favor, insira outro número.')
     }
     numeroIn.value = ''
     numeroIn.focus()    //para não precisar ficar clicando no campo de digitação após adicionar cada dado
