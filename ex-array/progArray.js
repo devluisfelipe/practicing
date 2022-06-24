@@ -2,11 +2,15 @@ let numeroIn = window.document.querySelector('input#valorEntrada')
 
 let cxLista = window.document.querySelector('select#armazValorEnt')
 
-let conjunto = []   //é uma ARRAY vazia.
+let conjunto = []   //é uma ARRAY vazia. Necessário cria-lá pois ela não existe.
 
 let ans = window.document.querySelector('div#resposta')     //aqui vai aparecer minha resposta.
 
 
+// validação do intervalo dos valores dos dados aceitos.
+// a ação (dataIn) e o valor (N) da função criada abaixo, são  nomeadas arbitrariamente.
+// essa técnica é apenas uma das maneiras para criar essa aplicação.
+// você cria as condições de maneira separada através das funções.
 function dataIn (N) {
     if (Number(N) >= 1 && Number(N) <= 1000) {
         return true
@@ -16,6 +20,7 @@ function dataIn (N) {
     } 
 }
 
+//encontrar se o número já faz parte daquela array ou não.
 function list (N, L) {
     if (L.indexOf(Number(N)) == -1) {
         return true
@@ -54,6 +59,7 @@ function finalizar() {
 
         for (let key in conjunto) {
             soma += conjunto[key]
+            
             if (conjunto[key] < valorBaixo) {
                 valorBaixo = conjunto[key]
             }
