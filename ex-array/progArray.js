@@ -32,6 +32,7 @@ function list (N, L) {
 
 function adicionar () {
     if (dataIn(numeroIn.value) && list(numeroIn.value, conjunto)) {
+        
         conjunto.push(Number(numeroIn.value))      //não pode esquecer, se não a ARRAY não armazena o dado adicionado
         
         let item = window.document.createElement('option')
