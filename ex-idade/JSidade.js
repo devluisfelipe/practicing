@@ -22,7 +22,6 @@ function verificar () {
         if (genero[0].checked) {
             sexo = 'um homem'
 
-
             if (idade > 0 && idade <= 12) {
                 pic.src = 'imagens/youngb.png'
 
@@ -38,6 +37,7 @@ function verificar () {
 
         } else {
             sexo = 'uma mulher'
+            
             if (idade > 0 && idade <= 12) {
                 pic.src = 'imagens/youngG.png'
 
