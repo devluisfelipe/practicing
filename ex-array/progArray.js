@@ -71,10 +71,10 @@ function finalizar() {
 
     ans.innerHTML = ``
     ans.innerHTML += `Foram adicionados ${conjunto.length} números.`
-    ans.innerHTML += `<p>O valor do menor dado inserido foi ${valorBaixo}</p>`
-    ans.innerHTML += `<p>O valor do maior dado inserido foi ${valorAlto}</p>`
-    ans.innerHTML += `<p>A soma dos dados inseridos equivale a ${soma}</p>`
-    ans.innerHTML += `<p>A média aritmética dos dados inseridos é ${soma/conjunto.length}.</p>`
+    ans.innerHTML += `<p>O valor do <strong>menor</strong> dado inserido foi ${valorBaixo}</p>`
+    ans.innerHTML += `<p>O valor do <strong>maior</strong> dado inserido foi ${valorAlto}</p>`
+    ans.innerHTML += `<p>A <strong>soma</strong> dos dados inseridos equivale a ${soma}</p>`
+    ans.innerHTML += `<p>A <strong>média aritmética</strong> dos dados inseridos é ${soma/conjunto.length}.</p>`
     ans.style.background = ' rgba(255, 255, 255, 0.50)'
     }
 }
