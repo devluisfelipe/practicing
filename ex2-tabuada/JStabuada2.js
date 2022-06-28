@@ -13,7 +13,7 @@ function clicar () {
             let item = window.document.createElement('div')
 
             item.innerText = `${N} x ${c} = ${N*c}`
-            item.style.backgroundColor = `rgba(255, 255, 255, 0.17)`
+            item.style.backgroundColor = `rgba(225, 225, 225, 0.71)`
             item.style.borderRadius = `8px`
             item.style.height = `26px`
             item.style.marginBottom = `10px`

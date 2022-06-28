@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(23, 23, 23);
+    background-image: url('imagem/background.png');
 }
 
 header > h1 {
@@ -17,6 +18,11 @@ header > h1 {
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 401px;
+}
+
+h1:hover {
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.615);
+    transition-duration: 0.71s;
 }
 
 main {
@@ -46,14 +52,17 @@ main > div > #botão {
 }
 
 #botão:hover {
-    filter: brightness(105%);
+    /* filter: brightness(105%); */
+    border: solid 1.5px;
+    border-color: magenta;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.615);
 }
 
 main > div#resposta {
     margin-top: 15px;    
     width: 262px;
     margin-inline: auto;
-    color: white;
+
 }
 
 footer > p {
@@ -73,7 +82,8 @@ a:hover {
     border: solid 2px;
     border-radius: 5px;
     border-color: cyan;
-    transition-duration: 0.5s;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.549);
+    transition-duration: 0.71s;
     padding: 1px;
 }
 
