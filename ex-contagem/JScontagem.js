@@ -47,7 +47,7 @@ function clicar () {
             addDiv.style.height = '26px'
             addDiv.style.textAlign = 'center'
             addDiv.style.paddingTop = '6px'
-            addDiv.style.margin = '4px'
+            addDiv.style.box = '4px'
             addDiv.style.display = 'inline-block'
             ans.appendChild(addDiv)
 
