@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* :root {
+    --fonte1: ;
+} */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(180deg, #03223f, #038bbb);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    height: 100vh;
+}
+
+header > h1 {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 600px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-weight: normal;
+}
+
+header > p {
+    text-align: center;
+    max-width: 450px;
+    margin-inline: auto;
+    font-weight: normal;
+    font-size: 1.15em;
+    line-height: 134%;
+    padding-bottom: 26px;
+}
+
+div#settings {
+    margin-inline: auto;
+    text-align: center;
+    font-size: 1.15em;
+    max-width: 450px;
+}
+
+#dataStart, #dataEnd {
+    display: flex;
+    text-align: center;
+    margin-inline: auto;
+}
+
+div#resultado {
+    width: 200px;
+    height: 200px;;
+    border-radius: 50%;
+    border: 4px solid cyan;
+    box-shadow: 0px 0px 6px white;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+input#botao {
+    display: block;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    width: 200px;
+    height: 53px;
+    margin-inline: auto;
+    background-color: transparent;
+    border: 2px solid cyan  ;
+    border-radius: 26px;
+    box-shadow: 0px 0px 5px white;
+    cursor: pointer;
+    font-size: 1.15em;
+}
+
+input#dstart {
+    height: 35px;
+}

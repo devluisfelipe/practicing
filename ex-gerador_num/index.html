@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Gerador de números aleatórios</h1>
+        <p><strong>Clique</strong> no botão abaixo para <strong>gerar</strong> um número dentro do intervalo que você desejar.</p>
+    </header>
+
+    <main>
+        <div id="settings">
+            <p>Insira os respectivos valores do intervalo de acordo com as caixas abaixo.</p>
+
+            <input type="number" name="txtstart" id="dataStart" placeholder="Insirir o valor inicial" min="0">
+    
+            <input type="number" name="txtstart" id="dataEnd" placeholder="Insirir o valor final" min="0">
+        </div>
+
+
+        <input type="button" value="Gerar número" id="botao" onclick="gerarNum()">
+        <div id="resultado">
+            <p id="resp"></p>
+        </div>
+
+
+    </main>
+
+    <script src="gerador_num.js"></script>
+</body>
+</html>
