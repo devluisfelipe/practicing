@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess What?</title>
+    <link rel="stylesheet" href="styleMGAME.css">
+
+</head>
+<body>
+    <header>
+        <h1>Guess What?</h1>
+    </header>
+    <main>
+        <div id="dados">
+            <input type="number" name="txtValor0" id="dataStart" min="0">
+            
+            <input type="number" name="txtValorF" id="dataEnd" min="0">
+        </div>
+
+        <input type="button" value="START!" id="botaoGener" onclick="Start()">
+
+
+        <div id="trofeu">
+            <p>INSERIR O TROFÉU!</p>
+        </div>
+
+        <div id="tentativas">
+            <input type="number" name="txtChute" id="resposta" min="0">
+            <input type="button" value="Check!" id="check" onclick="Check()">
+        </div>
+
+        <div id="historico">
+            <p>INSERIR O HISTÓRICO DE TENTATIVAS</p>
+        </div>
+    </main>
+
+    <script src="JSmgame.js"></script>
+</body>
+</html>
