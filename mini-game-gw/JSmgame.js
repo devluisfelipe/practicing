@@ -50,12 +50,12 @@ function Check () {
 
     if (chute.value.length == 0) {
         window.alert('[ERRO] Por favor insira um número.')      //fazer adaptação
-
     } else {
 
         if (verific(chute.value, tentativa)) {
            
             if (chute.value == ValSecret) {
+
                 window.alert('PARABÉNS! Você acertou!!')
         
             } else if (chute.value > ValSecret) {
