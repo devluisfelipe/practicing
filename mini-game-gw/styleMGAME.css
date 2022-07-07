@@ -1,38 +1,231 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte_geral);
     border: none;
 }
 
 body {
-    background-color: rgb(173, 173, 173);
-    /*
-    background-color: rgb(34, 34, 34);
-    background-image: url('');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    */
+    background-color: rgb(93, 180, 233);
+    position: relative;
 }
 
 header {
     text-align: center;
     padding-top: 35px;
-    margin-bottom: 35px;
+    padding-bottom: 35px;
 }
 
+.layoutEntr {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 17px;
+    border-radius: 11px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.iconExp {
+    position: absolute;
+    right: 17px;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(36, 36, 36);
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+.subtInpt {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.Inpt {
+    outline: none;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.botaoInic {
+    width: 80px;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: rgb(76, 172, 89);
+    display: block;
+    margin: auto;
+}
+
+#historico {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 17px;
+    border-radius: 11px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+
+/* ==== Modal explicativo ==== */
+.modal-container {
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.407);
+    position: fixed;    /* p/ fazer ele ocupar toda área do documento e por cima dos outros conteúdos*/
+    top: 0px;   /* p/ definir em que ponto ele começa aparecer a declaração position só funcionar após definido o top e o left*/
+    left: 0px;
+    z-index: 1000;     /*garante que o modal esteja por cima de todos os demais conteúdos do site*/
+    display: none;  /* ele é flex, mas ficar como 'none' para não aparecer todo momento sem executar a ação*/
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 60%;
+    min-width: 350px;
+    padding: 17px;
+    border-radius: 17px;
+    text-align: justify;
+    position: relative;
+}
+
+.modal-botao {
+    outline: none;
+    background-color: rgb(6, 142, 220);
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    float: right;
+}
+
+/* se colocar separado por um espaço simples o VS entende que é para aplciar essas propriedades/declarações no elemento dentro de 'modal-container' que tiver a classe '.mostrar'*/
+.modal-container.mostrar {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==== TENTATIVA DE CODAR O MODAL ==== */
+
+:root {
+    --cor: rgb(21, 21, 255);
+
+    --cor_container: white;
+
+    --fonte_geral: 'Poppins', sans-serif;
+    --fonte_grande: 1.2em;
+    --fonte_normal: 1em;
+
+    --z_modal: 1000;
+}
+
+
+@media screen and (min-width: 968px) {
+    :root {
+    --fonte_grande: 1.75em;
+    --fonte_normal: 1em;
+    }
+  }
 
 
 #trofeu {
-    color: rgb(251, 191, 10);
+    color: var(--cor);
 }
 
 
-
-#historico {
-    color: rgb(251, 191, 10);
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+.container {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.modal {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.modal__button {
+    transition: .3s;
+}
+
+.modal__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: var(--z_modal);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal__content {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    padding: 3em 2em 2em;
+    border-radius: 17px 17px 17px 17px;
+    transition: all .3s;
+    transform: scale(.8) translateY(15%);
+}
+
+.modal__img {
+    width: 150px;
+    margin-bottom: .75em;
+}
+
+.modal__close {
+    display: inline-flex;
+    color: rgb(168, 168, 168);
+    font-size: 1.25em;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    cursor: pointer;
+}
+
+
+/*.modal__title {}  NÃO NECESSÁRIO UTILIZAR */
+
+.modal__description {
+    margin-bottom: 8px;
+}
+
+

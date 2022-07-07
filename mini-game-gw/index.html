@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Guess What?</title>
+
+    <!-- Using the remote version of boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
     <link rel="stylesheet" href="styleMGAME.css">
 
 </head>
@@ -13,29 +18,90 @@
         <h1>Guess What?</h1>
     </header>
     <main>
-        <div id="dados">
-            <input type="number" name="txtValor0" id="dataStart" min="0">
-            
-            <input type="number" name="txtValorF" id="dataEnd" min="0">
+
+        <div class="layoutEntr">
+
+            <div title="Explicação" class="iconExp">
+                <i class='bx bx-question-mark bx-tada bx-rotate-90' ></i>
+            </div>
+
+            <h3>Passo 1</h3>
+
+            <div class="subtInpt">
+                <label for="dataSart">Insira um número <strong>inicial</strong> aqui</label>
+                <input type="number" name="txtValor0" id="dataStart" class="Inpt" min="0">
+            </div>
+
+            <div class="subtInpt">
+                <label for="dataSart">Insira um número <strong>final</strong> aqui</label>
+                <input type="number" name="txtValorF" id="dataEnd" class="Inpt" min="0">
+            </div>
+        
+            <input type="button" value="Start!" id="botaoGener" class="botaoInic" onclick="Start()">
+
         </div>
 
-        <input type="button" value="START!" id="botaoGener" onclick="Start()">
 
+        <div class="layoutEntr">
 
-        <div id="trofeu">
-            <p>INSERIR O TROFÉU!</p>
-        </div>
+            <div title="Explicação" class="iconExp">
+                <i class='bx bx-question-mark bx-tada bx-rotate-90' ></i>
+            </div>
 
-        <div id="tentativas">
-            <input type="number" name="txtChute" id="resposta" min="0">
-            <input type="button" value="Check!" id="check" onclick="Check()">
-        </div>
+            <h3>Passo 2</h3>
+
+            <div class="subtInpt">
+                <label for="dataSart">Insira sua <strong>resposta</strong> aqui</label>
+                <input type="number" name="txtChute" class="Inpt" id="resposta"min="0">
+            </div>
+
+            <input type="button" value="Check!"class="modal__button botaoInic" id="check" onclick="Check()">
+
+       </div>
+
 
         <div id="historico">
-            <p>INSERIR O HISTÓRICO DE TENTATIVAS</p>
+            <h3>Histórico de tentativas!</h3>
         </div>
+
     </main>
 
     <script src="JSmgame.js"></script>
+
+
+<!-- criando modal para instruções -->
+<div id="modal-explicaçao" class="modal-container">
+    <div class="modal-content">
+        <h3>Passo 1</h3>
+        <p>Você precisa inserir um número qualquer positivo na caixa equivalente ao número inicial e, em seguida, outro na caixa representada pelo número final. Dessa forma, a máquina vai gerar um número aleatório inteiro que esteja dentro desse intervalo previamente estabelecido por você.</p>
+        <input type="button" value="Entendi" class="modal-botao">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+        <div class="modal container" id="trofeu">
+            <!-- essas div é para fazer o pop-up que vai surgir ao clicar no botão check, MAS posteriormente isso só vai acontecer quando o usuário acertar o valor do número -->
+            <div class="modal__container" id="modal-container">
+                <div class="modal__content">
+                    <div class="modal__close" title="Close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <img src="imagens/trophy02.png" alt="Troféu como recompensa por adivinhar o número." class="modal__img">
+                    
+                    <h2 class="modal__title">Parabéns!</h2>
+                    <p class="modal__description">Você descobriu o número.</p>
+                </div>
+            </div>
+        </div>
+
 </body>
 </html>

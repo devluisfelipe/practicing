@@ -64,7 +64,8 @@ function Check () {
             } else {
                 window.alert(`Você falou ${chute.value}, mas ainda não é esse o Nº. Vou dar uma dica, é um Nº maior.`)
             }
-
+        
+        
         tentativa.push(Number(chute.value))
         hist.innerHTML += `<p>Você disse o número <strong>${chute.value}</strong></p>`
 
@@ -77,5 +78,16 @@ function Check () {
     chute.focus()    //para não precisar ficar clicando no campo de digitação após adicionar cada dado
 
 }
+//até aqui o código está rodando perfeitamente, conforme ideia inicial
+//fazer adaptações das janelas com a dica para os usuários
+//ocultar o número gerado aleatoriamente p/ o usuário
 
+
+
+
+
+
+
+
+/* ==== TENTATIVA DE CODAR O MODAL ==== */
 
