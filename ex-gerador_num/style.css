@@ -53,6 +53,7 @@ div#settings {
     width: 200px;
     height: 49px;
     background-color: transparent;
+    outline: none;
     border: 2px solid cyan;
     border-radius: 26px;
     font-size: 1.0em;
