@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Guess What?</title>
+    <title>Guess What</title>
 
     <!-- Using the remote version of boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <h1>Guess What?</h1>
+        <h1>GUESS WHAT</h1>
     </header>
     <main>
 
@@ -29,7 +29,7 @@
 
             <div class="subtInpt">
                 <label for="dataSart">Insira um número <strong>inicial</strong> aqui</label>
-                <input type="number" name="txtValor0" id="dataStart" class="Inpt" min="0">
+                <input type="number" name="txtValor0" id="dataStart" class="Inpt" min="0" value="0">
             </div>
 
             <div class="subtInpt">
@@ -61,7 +61,7 @@
 
 
         <div id="historico">
-            <h3>Histórico de tentativas!</h3>
+            <h3>Histórico de tentativas</h3>
         </div>
 
     </main>
@@ -78,38 +78,49 @@
     </div>
 </div>
 
+
 <!-- criando modal para instrução N02 -->
 <div id="modal-explicaçaoP2" class="modal-containerP2">
     <div class="modal-contentP2">
         <h3>Entendendo melhor...</h3>
-        <p>Após definido o intervalo no etapa 1, agora você precisa encontrar qual o número gerado pela máquina, mas fique tranquilo pois ela irá nos ajudar dando dicas de acordo com o número que você enviar como resposta. Portanto, insira um número na caixa representada pela respota e em seguida clique em 'Verificar!'.</p>
+        <p>Após definido o intervalo na etapa 1, agora você precisa encontrar qual o número gerado pela máquina, mas fique tranquilo pois ela irá nos ajudar dando dicas de acordo com o número que você enviar como resposta. Portanto, insira um número na caixa representada pela respota e em seguida clique em 'Verificar!'.</p>
         <input type="button" value="Entendi" class="modal-botaoP2">
     </div>
 </div>
 
 
+<!-- criando modal quando adivinha o número -->
+<div class="m-containerTrophy" id="m-Trophy">
 
-
-
-
-
-
-
-        <div class="modal container" id="trofeu">
-            <!-- essas div é para fazer o pop-up que vai surgir ao clicar no botão check, MAS posteriormente isso só vai acontecer quando o usuário acertar o valor do número -->
-            <div class="modal__container" id="modal-container">
-                <div class="modal__content">
-                    <div class="modal__close" title="Close">
-                        <i class='bx bx-x'></i>
-                    </div>
-
-                    <img src="imagens/trophy02.png" alt="Troféu como recompensa por adivinhar o número." class="modal__img">
-                    
-                    <h2 class="modal__title">Parabéns!</h2>
-                    <p class="modal__description">Você descobriu o número.</p>
-                </div>
-            </div>
+    <div class="m-contentTrophy">
+        <div class="m-closeTrophy" title="Close">
+            <i class='bx bx-x bx-tada'></i>
         </div>
+
+        <img src="imagens/trophy01.png" alt="Troféu como recompensa por adivinhar o número." class="m-imgTrophy">
+        
+        <h2 class="m-congratsTrophy">Parabéns!</h2>
+        <p class="m-msgTrophy">Você acertou o número.</p>
+        <input type="button" value="Jogar novamente" class="modal-botaoNG">
+    </div>
+
+</div>
+
+
+<!-- criando modal p/ MSG ERRO -->
+<div id="modal-aviso" class="modal-containerAviso">
+    <div class="modal-contentAviso">
+        <div class="iconAviso">
+            <i class='bx bxs-error-circle bx-fade-left' ></i>
+        </div>
+
+        <h3 id="tituloResposta">Ops! Algo está errado...</h3>
+        <p id="msgAviso" class="aviso"></p>
+
+        <input type="button" value="Tentar novamente" class="modal-botaoAviso">
+    </div>
+</div>
+
 
 </body>
 </html>

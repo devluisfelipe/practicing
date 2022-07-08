@@ -1,7 +1,5 @@
 let Val0 = window.document.querySelector('input#dataStart')
 let ValF = window.document.querySelector('input#dataEnd')
-let ans = window.document.querySelector('div#trofeu')
-
 
 let ValSecret = ''
 
@@ -20,16 +18,27 @@ function Start () {
         while (ValSecret < Val0.value) {
             ValSecret = Math.floor(Math.random()*ValF.value) + 1
         }
-        
-
-        ans.innerHTML = `<p>O número gerado está guardado aqui ${ValSecret}.<p>`    //remover o Nº posteriormente
-        ans.appendChild(cubo)
-        ans.innerHTML += `<p>Tente adivinha-lo!<p>`
 
     } else {
-        window.alert('[ERRO] Por favor, revise os daods inseridos. Lembrando que para os intervalos, o número final deve ser maior que o inicial.')
+        function abrirModAviso (seletorAviso) {
+            let msgAviso = document.getElementById(seletorAviso)
+        
+            if (msgAviso) {
+                msgAviso.classList.add('show1')
 
-        ans.innerHTML = '[ERRO]'    //fazer adaptação
+                let warning = window.document.querySelector('p#msgAviso')
+                warning.innerHTML = `Por favor, revise os dados inseridos. Lembrando que o valor do número inicial <strong>precisa ser inferior</strong> ao valor do número final.`
+                        
+                msgAviso.addEventListener('click', function(selectW) {
+                    if (selectW.target.className == 'modal-botaoAviso') {
+                        msgAviso.classList.remove('show1')
+                    }
+                })
+            }
+        }
+        
+        abrirModAviso ('modal-aviso')
+
     }
 }
 
@@ -49,20 +58,96 @@ function verific (N, L) {
 function Check () {
 
     if (chute.value.length == 0) {
-        window.alert('[ERRO] Por favor insira um número.')      //fazer adaptação
+
+        function abrirModAviso (seletorAviso) {
+            let msgAviso = document.getElementById(seletorAviso)
+        
+            if (msgAviso) {
+                msgAviso.classList.add('show1')
+
+                let warning = window.document.querySelector('p#msgAviso')
+                warning.innerHTML = `Por favor, insira um valor válido na caixa <strong>resposta</strong>.`
+                        
+                msgAviso.addEventListener('click', function(selectW) {
+                    if (selectW.target.className == 'modal-botaoAviso') {
+                        msgAviso.classList.remove('show1')
+                    }
+                })
+            }
+        }
+        
+        abrirModAviso ('modal-aviso')
+
     } else {
 
         if (verific(chute.value, tentativa)) {
            
             if (chute.value == ValSecret) {
+                function abrirModCongrats (seletorTrophy) {
+                    let msgTrophy = document.getElementById(seletorTrophy)
+                
+                    if (msgTrophy) {
+                        msgTrophy.classList.add('show1')
 
-                window.alert('PARABÉNS! Você acertou!!')
+                        msgTrophy.addEventListener('click', function(identific) {
+                            if (identific.target.className == 'bx bx-x bx-tada' || identific.target.className == 'm-closeTrophy') {
+                                msgTrophy.classList.remove('show1')
+                            }
+                        })
+                    }
+                }
+                
+                abrirModCongrats ('m-Trophy')
         
             } else if (chute.value > ValSecret) {
-                window.alert(`Você falou ${chute.value}, mas ainda não é esse o Nº. Vou dar uma dica, é um Nº menor.`)
+                
+                function abrirModAviso (seletorAviso) {
+                    let msgAviso = document.getElementById(seletorAviso)
+                
+                    if (msgAviso) {
+                        msgAviso.classList.add('show1')
+        
+                        let warning = window.document.querySelector('p#msgAviso')
+                        let titulo = window.document.querySelector('h3#tituloResposta')
+
+                        titulo.innerHTML = `Uhh, essa passou perto...`
+
+                        warning.innerHTML = `Você falou <strong>${chute.value}</strong>, mas ainda essa não é a resposta correta. Portanto, vai uma dica aí: <strong>é um número menor</strong>.`
+                                
+                        msgAviso.addEventListener('click', function(selectW) {
+                            if (selectW.target.className == 'modal-botaoAviso') {
+                                msgAviso.classList.remove('show1')
+                            }
+                        })
+                    }
+                }
+                
+                abrirModAviso ('modal-aviso')
         
             } else {
-                window.alert(`Você falou ${chute.value}, mas ainda não é esse o Nº. Vou dar uma dica, é um Nº maior.`)
+                function abrirModAviso (seletorAviso) {
+                    let msgAviso = document.getElementById(seletorAviso)
+                
+                    if (msgAviso) {
+                        msgAviso.classList.add('show1')
+        
+                        let warning = window.document.querySelector('p#msgAviso')
+                        let titulo = window.document.querySelector('h3#tituloResposta')
+
+                        titulo.innerHTML = `Uhh, essa passou perto...`
+
+                        warning.innerHTML = `Você falou <strong>${chute.value}</strong>, mas ainda essa não é a resposta correta. Portanto, vai uma dica aí: <strong>é um número maior</strong>.`
+                                
+                        msgAviso.addEventListener('click', function(selectW) {
+                            if (selectW.target.className == 'modal-botaoAviso') {
+                                msgAviso.classList.remove('show1')
+                            }
+                        })
+                    }
+                }
+                
+                abrirModAviso ('modal-aviso')
+                
             }
         
         
@@ -86,8 +171,7 @@ function Check () {
 
 
 
-/* ==== TENTATIVA DE CODAR O MODAL ==== */
-
+/* ======== function para abrir modal etapas 1 e 2 ======== */
 
 function abrirModal(seletor) {
     let modal = document.getElementById(seletor)
@@ -119,14 +203,15 @@ Na function, o parâmetro é o id 'modal-explicaçao' (existente);
         A classe mostrar foi configurada com uma animação em CSS.
 */
 
+
 function abrirModalP2(seletorP2) {
     let modalP2 = document.getElementById(seletorP2)
 
     if (modalP2) {
         modalP2.classList.add('mostrar')
         //para fechar o elemento ao clicar no botão 'Entendi'.
-        modalP2.addEventListener('click', function (event){
-            if (event.target.className == 'modal-botaoP2') {
+        modalP2.addEventListener('click', function (evento){
+            if (evento.target.className == 'modal-botaoP2') {
                 modalP2.classList.remove('mostrar')
             }
         })

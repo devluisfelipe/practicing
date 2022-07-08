@@ -2,10 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: var(--fonte_geral);
+    font-family: 'Poppins', sans-serif;
     border: none;
 }
 
@@ -88,7 +89,7 @@ h3 {
     position: fixed;    /* p/ fazer ele ocupar toda área do documento e por cima dos outros conteúdos*/
     top: 0px;   /* p/ definir em que ponto ele começa aparecer a declaração position só funcionar após definido o top e o left*/
     left: 0px;
-    z-index: 1000;     /*garante que o modal esteja por cima de todos os demais conteúdos do site*/
+    z-index: 1000;
     display: none;  /* ele é flex, mas ficar como 'none' para não aparecer todo momento sem executar a ação*/
     justify-content: center;
     align-items: center;
@@ -101,7 +102,6 @@ h3 {
     padding: 17px;
     border-radius: 17px;
     text-align: justify;
-    position: relative;
 }
 
 .modal-botao, .modal-botaoP2 {
@@ -134,115 +134,128 @@ h3 {
 }
 
 .mostrar {
-    animation: modalExplic .3s;
+    animation: modalExplic  .35s;
 }
 
 
 
+/* ==== Modal Parabéns ==== */
 
-
-
-
-
-
-
-
-/* ==== TENTATIVA DE CODAR O MODAL ==== */
-
-:root {
-    --cor: rgb(21, 21, 255);
-
-    --cor_container: white;
-
-    --fonte_geral: 'Poppins', sans-serif;
-    --fonte_grande: 1.2em;
-    --fonte_normal: 1em;
-
-    --z_modal: 1000;
-}
-
-/*
-@media screen and (min-width: 968px) {
-    :root {
-    --fonte_grande: 1.75em;
-    --fonte_normal: 1em;
-    }
-  }
-
-
-#trofeu {
-    color: var(--cor);
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.modal {
+.m-containerTrophy {
+    background-color: rgba(0, 0, 0, 0.53);
     height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
-.modal__button {
-    transition: .3s;
-}
-
-.modal__container {
-    position: absolute;
+    width: 100vw;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: flex-end;
-    overflow: hidden;
-    transition: all .3s;
-    z-index: var(--z_modal);
-    visibility: hidden;
-    opacity: 0;
+    position: fixed;    /* essa declaração que faz com que o modal fica sobre o conteúdo principal*/
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal__content {
-    position: relative;
-    margin: auto;
+
+.m-contentTrophy {
     background-color: white;
-    width: 400px;
+    min-width: 300px;
     text-align: center;
-    padding: 3em 2em 2em;
-    border-radius: 17px 17px 17px 17px;
-    transition: all .3s;
-    transform: scale(.8) translateY(15%);
+    padding: 44px 17px 26px 17px;
+    border-radius: 17px;
+    position: relative;
+    color: rgb(99, 99, 99);
 }
 
-.modal__img {
-    width: 150px;
-    margin-bottom: .75em;
-}
-
-.modal__close {
-    display: inline-flex;
-    color: rgb(168, 168, 168);
-    font-size: 1.25em;
+.m-closeTrophy {
+    font-size: 1.34em;
     position: absolute;
-    top: 17px;
     right: 17px;
+    top: 17px;
+    cursor: pointer;
+}
+
+.m-congratsTrophy {
+    padding: 8px 0px 8px 0px;
+    color: rgb(239, 177, 43);
+}
+
+.modal-botaoNG {
+    background-color: rgb(151, 99, 177);
+    width: 195px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 17px;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 
 
-/*.modal__title {}  NÃO NECESSÁRIO UTILIZAR */
+.m-containerTrophy.show1 {
+    display: flex;
+}
 
-/*.modal__description {
-    margin-bottom: 8px;
-}*/
+@keyframes modal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.show1 {
+    animation: modal .3s;
+}
 
 
+
+
+
+
+
+/* ==== Modal Aviso/Alerta ==== */
+
+.modal-containerAviso {
+    background-color: rgba(0, 0, 0, 0.50);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contentAviso {
+    background-color: white;
+    padding: 26px;
+    border-radius: 17px;
+    width: 380px;
+    text-align: justify;
+    position: relative;
+}
+
+.iconAviso {
+    float: left;
+    font-size: 1.45em;
+    color: red;
+}
+
+.aviso {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-botaoAviso {
+    float: right;
+    padding: 6px;
+    border-radius: 5px;
+    background-color:  rgb(6, 142, 220);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-containerAviso.show1 {
+    display: flex;
+}
