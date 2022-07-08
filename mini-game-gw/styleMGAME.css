@@ -30,7 +30,7 @@ header {
     position: relative;
 }
 
-.iconExp {
+.iconExp, .iconExpP2 {
     position: absolute;
     right: 17px;
     align-items: center;
@@ -62,9 +62,10 @@ h3 {
     padding: 8px;
     border-radius: 8px;
     font-weight: bold;
-    background-color: rgb(76, 172, 89);
+    background-color: rgb(54, 163, 68);
     display: block;
     margin: auto;
+    cursor: pointer;
 }
 
 #historico {
@@ -80,9 +81,10 @@ h3 {
 
 
 /* ==== Modal explicativo ==== */
-.modal-container {
+.modal-container, .modal-containerP2 {
     height: 100vh;
-    background-color: rgba(255, 0, 0, 0.407);
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.35);
     position: fixed;    /* p/ fazer ele ocupar toda área do documento e por cima dos outros conteúdos*/
     top: 0px;   /* p/ definir em que ponto ele começa aparecer a declaração position só funcionar após definido o top e o left*/
     left: 0px;
@@ -92,9 +94,9 @@ h3 {
     align-items: center;
 }
 
-.modal-content {
+.modal-content, .modal-contentP2 {
     background-color: white;
-    width: 60%;
+    max-width: 60%;
     min-width: 350px;
     padding: 17px;
     border-radius: 17px;
@@ -102,7 +104,7 @@ h3 {
     position: relative;
 }
 
-.modal-botao {
+.modal-botao, .modal-botaoP2 {
     outline: none;
     background-color: rgb(6, 142, 220);
     color: white;
@@ -115,9 +117,24 @@ h3 {
     float: right;
 }
 
-/* se colocar separado por um espaço simples o VS entende que é para aplciar essas propriedades/declarações no elemento dentro de 'modal-container' que tiver a classe '.mostrar'*/
-.modal-container.mostrar {
+.modal-container.mostrar, .modal-containerP2.mostrar {
     display: flex;
+}
+
+
+@keyframes modalExplic {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar {
+    animation: modalExplic .3s;
 }
 
 
@@ -144,7 +161,7 @@ h3 {
     --z_modal: 1000;
 }
 
-
+/*
 @media screen and (min-width: 968px) {
     :root {
     --fonte_grande: 1.75em;
@@ -224,8 +241,8 @@ img {
 
 /*.modal__title {}  NÃO NECESSÁRIO UTILIZAR */
 
-.modal__description {
+/*.modal__description {
     margin-bottom: 8px;
-}
+}*/
 
 

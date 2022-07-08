@@ -86,8 +86,57 @@ function Check () {
 
 
 
-
-
-
 /* ==== TENTATIVA DE CODAR O MODAL ==== */
 
+
+function abrirModal(seletor) {
+    let modal = document.getElementById(seletor)
+
+    if (modal) {
+        modal.classList.add('mostrar')
+        //para fechar o elemento ao clicar no botão 'Entendi'.
+        modal.addEventListener('click', function (event){
+            if (event.target.className == 'modal-botao') {
+                modal.classList.remove('mostrar')
+            }
+        })
+    }
+}
+
+let icon = document.querySelector('div.iconExp');
+
+icon.addEventListener('click',
+    function() {
+    abrirModal ('modal-explicaçao')
+    }
+); // primeiro argumento 'click' trata-se do evento que vai desencadear a ação da function 'abrirModal'
+
+/* Pela variável (let) selecionar o elemente que se deseja utilizar como meio de realizar um evento;
+Posteriormente, foi adicionado o evento 'click' que vai realizar uma ação;
+Na function, o parâmetro é o id 'modal-explicaçao' (existente);
+    A ação da function é criar uma variável que vai pegar o elemento html que recebe o ID 'modal-explicaçao' e então adicionar a classe 'mostrar' a esse elemento;
+        O id é só pra selecionar a variável.
+        A classe mostrar foi configurada com uma animação em CSS.
+*/
+
+function abrirModalP2(seletorP2) {
+    let modalP2 = document.getElementById(seletorP2)
+
+    if (modalP2) {
+        modalP2.classList.add('mostrar')
+        //para fechar o elemento ao clicar no botão 'Entendi'.
+        modalP2.addEventListener('click', function (event){
+            if (event.target.className == 'modal-botaoP2') {
+                modalP2.classList.remove('mostrar')
+            }
+        })
+    }
+}
+
+let iconP2 = document.querySelector('div.iconExpP2');
+
+iconP2.addEventListener('click',
+    function() {
+    abrirModalP2 ('modal-explicaçaoP2')
+    }
+)

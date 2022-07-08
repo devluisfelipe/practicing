@@ -25,7 +25,7 @@
                 <i class='bx bx-question-mark bx-tada bx-rotate-90' ></i>
             </div>
 
-            <h3>Passo 1</h3>
+            <h3>Etapa 1</h3>
 
             <div class="subtInpt">
                 <label for="dataSart">Insira um número <strong>inicial</strong> aqui</label>
@@ -37,27 +37,27 @@
                 <input type="number" name="txtValorF" id="dataEnd" class="Inpt" min="0">
             </div>
         
-            <input type="button" value="Start!" id="botaoGener" class="botaoInic" onclick="Start()">
+            <input type="button" value="Iniciar!" id="botaoGener" class="botaoInic" onclick="Start()">
 
         </div>
 
 
         <div class="layoutEntr">
 
-            <div title="Explicação" class="iconExp">
+            <div title="Explicação" class="iconExpP2">
                 <i class='bx bx-question-mark bx-tada bx-rotate-90' ></i>
             </div>
 
-            <h3>Passo 2</h3>
+            <h3>Etapa 2</h3>
 
             <div class="subtInpt">
                 <label for="dataSart">Insira sua <strong>resposta</strong> aqui</label>
                 <input type="number" name="txtChute" class="Inpt" id="resposta"min="0">
             </div>
 
-            <input type="button" value="Check!"class="modal__button botaoInic" id="check" onclick="Check()">
+            <input type="button" value="Verificar!"class="modal__button botaoInic" id="check" onclick="Check()">
 
-       </div>
+       </div> 
 
 
         <div id="historico">
@@ -72,12 +72,20 @@
 <!-- criando modal para instruções -->
 <div id="modal-explicaçao" class="modal-container">
     <div class="modal-content">
-        <h3>Passo 1</h3>
+        <h3>Entendendo melhor...</h3>
         <p>Você precisa inserir um número qualquer positivo na caixa equivalente ao número inicial e, em seguida, outro na caixa representada pelo número final. Dessa forma, a máquina vai gerar um número aleatório inteiro que esteja dentro desse intervalo previamente estabelecido por você.</p>
         <input type="button" value="Entendi" class="modal-botao">
     </div>
 </div>
 
+<!-- criando modal para instrução N02 -->
+<div id="modal-explicaçaoP2" class="modal-containerP2">
+    <div class="modal-contentP2">
+        <h3>Entendendo melhor...</h3>
+        <p>Após definido o intervalo no etapa 1, agora você precisa encontrar qual o número gerado pela máquina, mas fique tranquilo pois ela irá nos ajudar dando dicas de acordo com o número que você enviar como resposta. Portanto, insira um número na caixa representada pela respota e em seguida clique em 'Verificar!'.</p>
+        <input type="button" value="Entendi" class="modal-botaoP2">
+    </div>
+</div>
 
 
 
