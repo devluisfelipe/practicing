@@ -66,6 +66,10 @@ function Check () {
                 msgAviso.classList.add('show1')
 
                 let warning = window.document.querySelector('p#msgAviso')
+                let titulo = window.document.querySelector('h3#tituloResposta')
+
+                        titulo.innerHTML = `Ops! Algo está errado....`
+
                 warning.innerHTML = `Por favor, insira um valor válido na caixa <strong>resposta</strong>.`
                         
                 msgAviso.addEventListener('click', function(selectW) {
@@ -83,6 +87,7 @@ function Check () {
         if (verific(chute.value, tentativa)) {
            
             if (chute.value == ValSecret) {
+                
                 function abrirModCongrats (seletorTrophy) {
                     let msgTrophy = document.getElementById(seletorTrophy)
                 
@@ -155,7 +160,29 @@ function Check () {
         hist.innerHTML += `<p>Você disse o número <strong>${chute.value}</strong></p>`
 
         } else {
-            window.alert('Por favor insira um número que você ainda não tenha tentado.')      //fazer adaptação
+            
+            function abrirModAviso (seletorAviso) {
+                let msgAviso = document.getElementById(seletorAviso)
+            
+                if (msgAviso) {
+                    msgAviso.classList.add('show1')
+    
+                    let warning = window.document.querySelector('p#msgAviso')
+                    let titulo = window.document.querySelector('h3#tituloResposta')
+
+                    titulo.innerHTML = `Atenção!`
+
+                    warning.innerHTML = `Por favor, insira um número que você ainda <strong>não</strong> tenha tentado.`
+                            
+                    msgAviso.addEventListener('click', function(selectW) {
+                        if (selectW.target.className == 'modal-botaoAviso') {
+                            msgAviso.classList.remove('show1')
+                        }
+                    })
+                }
+            }
+            
+            abrirModAviso ('modal-aviso')            
         } 
     } 
 
