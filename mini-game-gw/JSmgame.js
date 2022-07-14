@@ -252,3 +252,10 @@ iconP2.addEventListener('click',
     abrirModalP2 ('modal-explicaçaoP2')
     }
 )
+
+
+// ==== Atualizar a página ao clicar no botão de jogar novamente ====
+
+function NewGame () {
+    window.location.reload()
+}
