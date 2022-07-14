@@ -37,6 +37,7 @@ main > div > #tabnumber {
     padding: 4px;
     text-align: center;
     font-size: 1.05em;
+    outline: none;
 }
 
 main > div > #botão {
