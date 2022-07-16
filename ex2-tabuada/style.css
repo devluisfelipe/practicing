@@ -12,12 +12,12 @@ body {
 }
 
 header > h1 {
-    text-align: center;
+    text-align: justify;
     color: cyan;
     margin-inline: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    max-width: 401px;
+    max-width: 328px;
 }
 
 h1:hover {
@@ -43,7 +43,7 @@ main > div > #tabnumber {
 main > div > #botão {
     height: 40px;
     width: 71px;
-    border-radius: 8px;
+    border-radius: 10%;
     border: none;
     color: white;
     background-color: rgb(149, 77, 173);
@@ -70,8 +70,9 @@ footer > p {
     margin-top: 25px;
     margin-bottom: 10px;
     color: white;
-    width: 401px;
+    width: 305px;
     margin-inline: auto;
+    text-align: center;
 }
 
 footer > p > a {
