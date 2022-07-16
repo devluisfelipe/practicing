@@ -1,5 +1,11 @@
-# practicing
- Olá, eu me chamo Luís Felipe.
-Sou graduado em engenharia civil.
-Faz um pouco mais de 4 meses  (14.07.2022) que iniciei nesse processo de aprendizagem de programação. Ainda estou dando os primeiros passos em html, CSS e JavaScript.
-Todas as aplicações foram realizadas, do início ao fim, com base nos conhecimentos que adquiri ao longo desse jornada de estudos.
+# Hello, welcome to my GitHub!
+My name is Luís Felipe and I'm graduated in civil engineer.
+I've studied html, css and JavaScript since March, 2022.
+
+Below, there are some applications that was developed by me.
+
+- [Mini-game adivinhação](https://devluisfelipe.github.io/practicing/mini-game-gw/index.html)
+
+- [Gerador de número](https://devluisfelipe.github.io/practicing/ex-gerador_num/index.html)
+
+- [Tabuada](https://devluisfelipe.github.io/practicing/ex2-tabuada/index.html)
