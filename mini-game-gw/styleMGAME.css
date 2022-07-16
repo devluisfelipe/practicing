@@ -84,6 +84,7 @@ h3 {
     margin: auto;
     cursor: pointer;
     color: white;
+    flex-shrink: 0;
 }
 
 #historico {
