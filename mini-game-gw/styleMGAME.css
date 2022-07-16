@@ -80,7 +80,7 @@ h3 {
     border-radius: 8px;
     font-weight: bold;
     background-color: rgb(239, 177, 43);
-    display: block;
+    display: flex;
     margin: auto;
     cursor: pointer;
     color: white;
