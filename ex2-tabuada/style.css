@@ -29,9 +29,9 @@ main {
     text-align: center;
 }
 
-div {
+#data {
     margin: auto;
-    width: 375px;
+    width: 298px;
     display: flex;
     justify-content: space-evenly;
 }
