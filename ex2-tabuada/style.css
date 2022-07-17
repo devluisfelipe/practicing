@@ -29,7 +29,15 @@ main {
     text-align: center;
 }
 
-main > div > #tabnumber {
+div {
+    margin: auto;
+    width: 375px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#tabnumber {
     height: 30px;
     border-radius: 8px;
     width: 170px;
@@ -40,17 +48,16 @@ main > div > #tabnumber {
     outline: none;
 }
 
-/*#botão {
+#botão {
     height: 40px;
     width: 71px;
     border-radius: 8px;
     border: none;
     color: white;
     background-color: rgb(149, 77, 173);
-    margin-left: 8px;
     font-weight: bolder;
     font-size: 1.05em;
-}*/
+}
 
 #botão:hover {
     /* filter: brightness(105%); */
