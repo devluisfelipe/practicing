@@ -1,5 +1,6 @@
 function clicar () {
-    let N = Number(window.document.querySelector('input#tabnumber').value)
+    let nIN = window.document.querySelector('input#tabnumber')
+    let N = Number(nIN.value)
 
     let ans = window.document.querySelector('div#resposta')
 
@@ -19,7 +20,9 @@ function clicar () {
             item.style.marginBottom = `10px`
             item.style.paddingTop = `8px`
             ans.appendChild(item)
-            c++
+            c++ 
         }
     }
+    nIN.value = ''
+    nIN.focus()
 }
