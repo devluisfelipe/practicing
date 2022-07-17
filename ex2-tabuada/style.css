@@ -40,10 +40,10 @@ main > div > #tabnumber {
     outline: none;
 }
 
-main > div > #botão {
+#botão {
     height: 40px;
     width: 71px;
-    border-radius: 10%;
+    border-radius: 8px;
     border: none;
     color: white;
     background-color: rgb(149, 77, 173);
