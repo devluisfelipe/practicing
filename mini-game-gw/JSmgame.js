@@ -182,14 +182,16 @@ function Check () {
                 }
             }
             
-            abrirModAviso ('modal-aviso')            
-        } 
+            abrirModAviso ('modal-aviso')
+            
+        }
     } 
-
-    chute.innerHTML = ''
-    chute.focus()    //para não precisar ficar clicando no campo de digitação após adicionar cada dado
+    
+chute.value = ''
 
 }
+
+
 //até aqui o código está rodando perfeitamente, conforme ideia inicial
 //fazer adaptações das janelas com a dica para os usuários
 //ocultar o número gerado aleatoriamente p/ o usuário
