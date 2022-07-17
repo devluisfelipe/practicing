@@ -8,20 +8,22 @@
     
     <link rel="stylesheet" href="style.css">
     
+    <script src="anime/anime.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Gerador de números aleatórios</h1>
-        <p><strong>Clique</strong> no botão abaixo para <strong>gerar</strong> um número dentro do intervalo que você desejar.</p>
+        <h1>Gerador de número</h1>
     </header>
 
     <main>
         <div id="settings">
-            <p>Mas, primeiramente, insira os respectivos valores do intervalo de acordo com as caixas abaixo.</p>
+            <p class="mobile"><strong>Clique</strong> no botão abaixo para <strong>gerar</strong> um número dentro do intervalo que você desejar.</p>
 
-            <input type="number" name="txtstart" id="dataStart" placeholder="Insirir o valor inicial" min="0">
+            
+
+            <input type="number" name="txtstart" id="dataStart" class="entrada" placeholder="Insirir o valor inicial" min="0">
     
-            <input type="number" name="txtstart" id="dataEnd" placeholder="Insirir o valor final" min="0">
+            <input type="number" name="txtstart" id="dataEnd" class="entrada" placeholder="Insirir o valor final" min="0">
         </div>
 
 
@@ -33,7 +35,6 @@
 
             <div id="circleEffect"></div>
         </div>
-
 
     </main>
 

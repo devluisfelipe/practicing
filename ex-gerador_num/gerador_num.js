@@ -5,6 +5,8 @@ let End = window.document.querySelector('input#dataEnd')
 let layout = window.document.querySelector('div#resultado')
 let animation = window.document.querySelector('div#circleEffect')
 
+let test = window.document.querySelector('p#testeID')
+
 function teste (x, y) {
     if (Number(x) >= 0 && Number(y) > Number(x)){
         return true
@@ -21,7 +23,14 @@ function gerarNum () {
             C = Math.floor(Math.random() * End.value) + 1
         }
 
-        ans.innerHTML = `${C}`
+        //ans.innerHTML = `${C}`
+
+        anime ({
+            targets: ans,
+            innerHTML: [start, C],
+            easing: 'linear',
+            round: 1
+        })
 
         layout.style.border = '2px solid cyan'
         animation.style.boxShadow = 'inset 0px 0px 2px white, 0px 0px 15px white'

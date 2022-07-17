@@ -29,14 +29,14 @@ h1:hover {
     transition-duration: 0.71s;
 }
 
-header > p {
+.mobile {
     text-align: center;
     max-width: 450px;
+    min-width: 300px;
     margin-inline: auto;
     font-weight: normal;
     font-size: 1.15em;
     line-height: 134%;
-    padding-bottom: 26px;
 }
 
 div#settings {
@@ -46,7 +46,7 @@ div#settings {
     max-width: 450px;
 }
 
-#dataStart, #dataEnd {
+.entrada {
     display: flex;
     text-align: center;
     margin-inline: auto;
@@ -60,11 +60,11 @@ div#settings {
     margin-top: 26px;
 }
 
-div#resultado {
+
+#resultado {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    transition-duration: 0.35s;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -73,6 +73,8 @@ div#resultado {
     position: relative;
 }
 
+
+/* ==== efeito após aparecer o resultado ==== */
 @keyframes circle {
     0% { opacity: 0.4; }
     100% { opacity: 1; }
@@ -87,7 +89,7 @@ div#resultado {
     animation: circle 1s linear infinite;
     position: absolute;
 }
-
+/* ==== termina aqui o cod. efeito ==== */
 
 input#botao {
     display: block;
