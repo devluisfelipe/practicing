@@ -6,6 +6,6 @@ Below, there are some applications that was developed by me.
 
 - [Mini-game adivinhação🧩](https://devluisfelipe.github.io/practicing/mini-game-gw/index.html)
 
-- [Gerador de númer🎲o](https://devluisfelipe.github.io/practicing/ex-gerador_num/index.html)
+- [Gerador de número🎲](https://devluisfelipe.github.io/practicing/ex-gerador_num/index.html)
 
 - [Tabuada🧮](https://devluisfelipe.github.io/practicing/ex2-tabuada/index.html)
